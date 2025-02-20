@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotate-card {
+  background-color: transparent;
+  height: 500px;
+  width: 350px;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.inner-card {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transition: all 0.8s;
+}
+.front-card {
+  background-image: url('https://img.freepik.com/premium-photo/beautiful-landscape-nature-wallpaper-style-3d-realistic-image-ai-generated_1020331-18499.jpg');
+
+  backdrop-filter: blur(2px);
+}
+
+.back-card {
+  background-image: url('https://img.freepik.com/premium-photo/beautiful-landscape-nature-wallpaper-style-3d-realistic-image-ai-generated_1020331-18551.jpg');
+  padding: 20px;
+  transform: rotateY(180deg);
+}
+
+.front-card,
+.back-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  border-radius: 30px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 10px 10px 20px #f86706;
+}
+
+.rotate-card:hover .inner-card {
+  transform: rotateY(180deg);
+}
+
+.img-div {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVs3F5bdkmq6YhSDx51rtLOqBjot_kxBFIDg&s');
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  box-shadow: 10px 0px 10px red, -10px 0px 10px orangered,
+    0px 10px 10px rgb(230, 11, 47), 0px -10px 10px yellow;
+}
+
+.hello {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  font-weight: 900;
+  color: red;
+  text-shadow: 0px 10px 10px yellow, 10px 0px 10px white;
+}
+
+.avatar {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  font-weight: 900;
+  color: red;
+  text-shadow: 3px 0px 5px yellow, 0px 3px 5px white;
+}
+
+.back-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  font-weight: 900;
+  text-shadow: 5px 5px 10px yellow;
+}
+
+.back-p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  font-weight: 700;
+  color: red;
+  text-shadow: 5px 5px 10px yellow;
+}
